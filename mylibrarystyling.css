@@ -1,0 +1,283 @@
+@import url('https://fonts.googleapis.com/css?family=poppins:wght@300;400;500;600;700;800;900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: 'poppins', sans-serif;
+}
+
+:root{
+    --bg-color: #1f242d;
+    --second-bg-color:#323946;
+    --text-color:#fff;
+    --main-color:#0ef;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+body{
+   background: var(--bg-color);
+   color: var(--text-color); 
+}
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem 9%;
+    background: var(--bg-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.header.sticky{
+    border-bottom: .1rem solid rgba(0, 0, 0 ,.2);
+}
+
+.logo{
+    font-size: 2.5rem;
+    color: var(--text-color);
+    font-weight: 600;
+    cursor: default;
+}
+
+/*header {
+    background-color: #333;
+    color: #fff;
+    padding: 1em;
+    text-align: center;
+}*/
+
+span{
+    color: var(--main-color);
+}
+
+.heading{
+    text-align: center;
+    font-size: 4.5rem;
+}
+
+.navbar a{
+    font-size: 1.7rem;
+    color: var(--text-color);
+    margin-left: 4rem; 
+    transition: .3s;
+ }
+ 
+ .navbar a:hover,
+ .navbar a.active {
+    color: var(--main-color);
+ }
+
+main {
+    padding: 20px;
+}
+
+section{
+    /* min-height: 100vh;  */
+    padding: 10rem 9% 2rem;
+}
+
+/*add books sections styling*/
+.add-books hr{
+    border: 1px solid blueviolet;
+    margin-top: 3rem;
+    margin-bottom: 5rem;
+    margin: 9rem 12rem;
+}
+
+/*add books sections styling*/
+.add-books .arabic-title h2{
+    direction: rtl;
+    font-size: 6.5rem;
+    text-shadow: 0.3rem 0.3rem 0.5rem blueviolet;
+    margin-bottom: 5rem;
+    font-family: 'Amiri', serif;
+}
+
+.arabic-books{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    align-items: center;
+    gap: 2.5rem;
+    direction: rtl;
+}
+
+.arabic-books .book-content{
+    position: relative;
+    border-radius: 2rem;
+    box-shadow: 0 0 1rem var(--bg-color);
+    overflow: hidden;
+    margin-bottom: 4rem;
+    width: 23vw;
+    height: 24vw;
+    border: 2px solid var(--main-color);
+    /* direction: ltr; */
+}
+
+.arabic-books .book-image img{
+    position: absolute;
+    width: 100%;
+    height: 70%;
+    padding: 2rem;
+    transition: 0.5s ease;
+}
+
+.arabic-books .book-content:hover .book-image img{
+    /* transform: rotateY(60deg); */
+    transform: rotate3d(1,1,0,-35deg);
+    /* background-color: rgba(127, 255, 212, 0.5); */
+    box-shadow: 0.5rem 0.5rem 5rem rgba(127, 255, 212, 0.5);
+}
+
+.arabic-books .book-info{
+    position: absolute;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto;
+    width: 100%;
+    margin-top: 77%;
+    margin-right: 3%;
+}
+
+.arabic-books .book-info p{
+    font-size: 2.1rem;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Aref Ruqaa Ink', serif;
+}
+
+.arabic-books .book-info p span{
+    font-weight: bolder;
+    padding-right: 1rem;
+    font-size: 2.6rem;
+    font-family: 'Amiri', serif;
+}
+
+.arabic-books .book-info .done-symbol{
+    font-size: 5rem;
+    margin-top: 1.9rem;
+    margin-right: 90%; 
+}
+
+.arabic-books .book-info .active{
+    color: green;
+    font-size: 5.5rem;
+    margin-right: 90%;
+    text-shadow: 0.1rem 0.1rem 4rem var(--main-color);
+}
+
+/*___________***************-------------------------------****************________________*/
+
+/* add English books section for styling*/
+.add-books .english-title h2{
+    font-size: 5rem;
+    text-shadow: 0.3rem 0.3rem 0.5rem blueviolet;
+    margin-bottom: 5rem;
+}
+
+.english-books{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    align-items: center;
+    gap: 2.5rem;
+}
+
+.english-books .book-content{
+    position: relative;
+    border-radius: 2rem;
+    box-shadow: 0 0 1rem var(--bg-color);
+    overflow: hidden;
+    margin-bottom: 4rem;
+    width: 23vw;
+    height: 24vw;
+    border: 2px solid var(--main-color);
+}
+
+.english-books .book-image img{
+    position: absolute;
+    width: 100%;
+    height: 70%;
+    padding: 2rem;
+    /* border: 2px solid #0ef; */
+}
+
+.english-books .book-info{
+    position: absolute;
+    display: flex;
+    width: 100%;
+    /* border: 2px solid #0ef; */
+    margin-top: 79%;
+    padding-left: 1.4rem;
+}
+
+.english-books .book-info p{
+    font-size: 1.8rem;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.english-books .book-info p span{
+    font-weight: bolder;
+    padding-right: 1rem;
+    font-size: 2rem;
+    /* font-family: ; */
+}
+
+.english-books .book-info .done-symbol{
+    font-size: 5rem;
+    margin-top: 0.3rem;
+    margin-left: 13%;
+}
+
+.english-books .book-info .active{
+    color: green;
+    font-size: 5.5rem;
+    margin-left: 13%;
+    text-shadow: 0.1rem 0.1rem 4rem var(--main-color);
+
+}
+
+
+
+/* Footer of the page styling */
+.footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 2rem 9%;
+    background: var(--second-bg-color);
+}
+
+.footer-text p{
+    font-size: 1.6rem;
+}
+
+.footer-iconTop a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: .8rem ;
+    background: var(--main-color);
+    border-radius: .8rem;
+    transition: 0.5s ease;
+}
+
+.footer-iconTop a:hover{
+    box-shadow: 0 0 1rem var(--main-color);
+}
+
+.footer-iconTop a i{
+    font-size: 2.4rem;
+    color: var(--second-bg-color);
+}
